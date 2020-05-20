@@ -1,3 +1,32 @@
-.margin-top {
-    margin-top: 5%;
+html {
+    font-size: 14px;
 }
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+.container {
+    max-width: 969px;
+}
+.pricing-header {
+    max-width: 768px;
+}
+.card-deck .card {
+    min-width: 220px;
+}
+.btn-right {
+    align-items: flex-end;
+}
+.themed-grid-col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(86, 61, 124, .15);
+    border: 1px solid rgba(86, 61, 124, .2);
+}
+.themed-container {
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 123, 255, .15);
+    border: 1px solid rgba(0, 123, 255, .2);
+}  

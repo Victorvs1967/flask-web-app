@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title %}Users List{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2 class="d-flex">Users List</h2>
+    <div class="row row-cols-4">
+        <div class="col themed-grid-col"><b>User name</b></div>
+        <div class="col themed-grid-col"><b>Phone number</b></div>
+        <div class="col themed-grid-col"><b>Date adding</b></div>
+        <div class="col themed-grid-col"><b>info</b></div>
+    </div>
+    {% for user in users %}
+    <div class="row row-cols-4">
+        <div class="col themed-grid-col">{{ user.name }}</div>
+        <div class="col themed-grid-col">{{ user.phone }}</div>
+        <div class="col themed-grid-col">{{ user.date.strftime('%d-%m-%Y, %X') }}</div>
+        <div class="col themed-grid-col">
+            <a href="/users-list/{{ user.id }}" class="btn btn-warning">User info</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block title %}User Page{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2 class="d-flex">Add User</h2>
+    <form method="POST">
+        <label>User Name</label>
+        <input type="text" name="user-name" class="form-control" id="user-name" placeholder="enter username"><br>
+        <label>Phone Number</label>
+        <input type="phone" name="phone-number" class="form-control" id="phone-number" placeholder="enter phone number"><br>
+        <button type="submit" class="btn btn-success btn-lg text-right">Send</button>
+    </form>
+</div>
+{% endblock %}

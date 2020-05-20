@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block title %}User Info{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2>User: {{ user.name }}</h2>
+    <div class="row md-4">
+        <div class="col themed-grid-col"><b>Id</b></div>
+        <div class="col themed-grid-col"><b>User name</b></div>
+        <div class="col themed-grid-col"><b>Phone number</b></div>
+        <div class="col themed-grid-col"><b>Date created</b></div>
+        <div class="col themed-grid-col"><b>Edit user</b></div>
+        <div class="col themed-grid-col"><b>Delete user</b></div>
+    </div>
+    <div class="row md-4">
+        <div class="col themed-grid-col">{{ user.id }}</div>
+        <div class="col themed-grid-col">{{ user.name }}</div>
+        <div class="col themed-grid-col">{{ user.phone }}</div>
+        <div class="col themed-grid-col">{{ user.date.strftime('%d-%m-%Y, %X') }}</div>
+        <div class="col themed-grid-col">
+            <a href="/users-list/{{ user.id }}/update" class="btn btn-success d-flex">Edit</a>
+        </div>
+        <div class="col themed-grid-col">
+            <a href="/users-list/{{ user.id }}/delete" class="btn btn-danger d-flex">Delete</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
