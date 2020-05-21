@@ -1,6 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-
 from app import app
 
 
@@ -17,3 +16,4 @@ class Data(db.Model):
 
     def __repr__(self):
         return f'User {self.id}'
+
